@@ -32,3 +32,9 @@ api.php -> utvonalak letrehozasa (get-books -> getBooks)
 
         return response()->json($stat);
     }
+
+    $index = 1;
+        foreach ($asteroids as $asteroid) {
+            $asteroid['index'] = $index . '.';
+            $index++;
+        }
