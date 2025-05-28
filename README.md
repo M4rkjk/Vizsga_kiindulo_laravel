@@ -23,9 +23,9 @@ api.php -> utvonalak letrehozasa (get-books -> getBooks)
     {
         $stat = DB::table('FO_TÁBLA_NEVE') // pl. space_agencies
         ->join('KAPCSOLT_TÁBLA_NEVE', 'FO_TÁBLA.PRIMARY_KULCS', '=', 'KAPCSOLT_TÁBLA.FOREIGN_KULCS')
-        ->groupBy('FO_TÁBLA.NÉV_VAGY_ID')
+        ->groupBy('KAPCSOLT_TÁBLA.NAME')
         ->select(
-            'FO_TÁBLA.NÉV_VAGY_ID',
+            'KAPCSOLT_TÁBLA.NAME',
             DB::raw('COUNT(*) as összeg')
         )
         ->get();
