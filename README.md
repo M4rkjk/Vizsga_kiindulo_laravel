@@ -1,3 +1,4 @@
+composer i
 DBForge: sql importálása
 .env -> adatbázis neve
 php artisan migrate 
